@@ -152,6 +152,90 @@
     + $ git commit -m "Creación del esqueleto del proyecto"
     + $ git push -u origin main
 
+## Instalación de dependencias principales
++ [Laravel Permission](https://spatie.be/docs/laravel-permission/v3/basic-usage/basic-usage)
++ [Laravel AdminLTE](https://github.com/jeroennoten/Laravel-AdminLTE)
++ [Plantilla AdminLTE](https://adminlte.io/themes/v3/index.html)
++ [Documentación Laravel Collective](https://laravelcollective.com/docs/6.x/html)
++ [Sweetalert2](https://sweetalert2.github.io)
++ [Bootstrap](https://github.com/twbs/bootstrap)
+1. Instalación de **Laravel Permission** para la implementación de un sistema de roles y permisos:
+    + $ composer require spatie/laravel-permission
+    + Publicar las vistas de Laravel Permission:
+        + $ php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+    + Ejecutar las migraciones:
+        + $ php artisan migrate
+    + Implementar el trait **HasRoles** en el modelo **User**:
+        ```php
+        ≡
+        use Spatie\Permission\Traits\HasRoles;
+
+        class User extends Authenticatable
+        {
+            ≡
+            use HasRoles;
+            ≡
+        }
+        ```
+2. Integración de plantilla **AdminLTE** para el panel administrativo:
+	+ $ composer require jeroennoten/laravel-adminlte
+    + $ php artisan adminlte:install
+    + Publicar vista de AdminLTE:
+        + $ php artisan adminlte:install --only=main_views
+        + **Nota 1**: En **resources\views\vendor\adminlte\page.blade.php** es de donde se extienden las plantillas.
+        + **Nota 2**: Modelo de uso de la plantilla AdminLTE:6. Diseñar vista para pruebas **resources\views\admin\index.blade.php**:
+            ```php
+            @extends('adminlte::page')
+
+            @section('title', 'Sistemas de roles y permisos | Soluciones++')
+
+            @section('content_header')
+                <h1>Sistemas de roles y permisos</h1>
+            @stop
+
+            @section('content')
+                <p>Sistemas de roles y permisos</p>
+            @stop
+
+            @section('css')
+                {{-- ARCHIVOS CSS REQUERIDOS POR LA APLICACIÓN --}}
+            @stop
+
+            @section('js')
+                {{-- ARCHIVOS JS REQUERIDOS POR LA APLICACIÓN --}}
+            @stop
+            ```
+3. Instalar **Laravel Collective** para hacer formularios:
+    + $ composer require laravelcollective/html
+4. Instalar **Sweetalert2** para notificaciones:
+    + $ php artisan adminlte:plugins install
+    + Modificar en **config\adminlte.php**:
+        ```php
+        ≡
+        'Sweetalert2' => [
+            'active' => true,   /* Activamos para todas las vistas de la plantilla Sweetalert2 */
+            'files' => [
+                [
+                    'type' 		=> 'js',
+                    'asset' 	=> true,
+                    'location' 	=> 'vendor/sweetalert2/sweetalert2.all.min.js',
+                ],
+            ],
+        ],
+        ≡
+        ```
+    + Agregamos la siguiente instrucción al archivo **resources\js\app.js**:
+        ```js
+        window.Swal = require('sweetalert2');
+        ```
+    + $ npm install sweetalert2
+	+ $ npm run dev
+5. Instalar Bootstrap:
+    + $ npm install bootstrap
+6. Realizar commit:
+    + $ git add .
+    + $ git commit -m "Instalación de dependencias principales"
+    + $ git push -u origin main
 
 
 
