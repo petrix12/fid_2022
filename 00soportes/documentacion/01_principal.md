@@ -3,7 +3,7 @@
 + URL prueba:
 + URL producción:
 + Figma: https://www.figma.com/proto/qAREYzpdkJtjdE262QOCwb/CDS?node-id=79%3A2&scaling=min-zoom&page-id=2%3A2&starting-point-node-id=79%3A2
-+ Repositorio GitHub:
++ Repositorio GitHub: https://github.com/petrix12/fid_2022.git
 
 ## Antes de iniciar:
 1. Crear proyecto en la página de [GitHub](https://github.com) con el nombre: **fid_2022**.
@@ -158,7 +158,8 @@
 + [Plantilla AdminLTE](https://adminlte.io/themes/v3/index.html)
 + [Documentación Laravel Collective](https://laravelcollective.com/docs/6.x/html)
 + [Sweetalert2](https://sweetalert2.github.io)
-+ [Bootstrap](https://github.com/twbs/bootstrap)
++ [Bootstrap GitHub](https://github.com/twbs/bootstrap)
++ [Bootstrap npm](https://www.npmjs.com/package/bootstrap)
 1. Instalación de **Laravel Permission** para la implementación de un sistema de roles y permisos:
     + $ composer require spatie/laravel-permission
     + Publicar las vistas de Laravel Permission:
@@ -237,9 +238,30 @@
     + $ git commit -m "Instalación de dependencias principales"
     + $ git push -u origin main
 
+## Configurar un servicio de base de datos MongoDB
 
+## Crear un servicio de base de datos MySQL en AWS
 
+## Crear un servicio de base de datos MongoDB en AWS
 
+## Deploy del proyecto en AWS
+
+## Comandos Git
++ Iniciar repositorio:
+    + $ git init
++ Agregar cambios al repositorio:
+    + $ git add .
++ Realizar commit:
+    + $ git commit -m "Antes de iniciar"
++ Crear rama principal
+    + $ git branch -M main
++ Enlazar repositorio Local con proyecto GitHub
+    + $ git remote add origin https://github.com/petrix12/fid_2022.git
++ Sincronizar de Local a GitHub:
+    + $ git push -u origin main
++ Sincronizar de GitHub a Local:
+    + $ git pull --rebase origin
++ mmm
 
     ```php
     ```
