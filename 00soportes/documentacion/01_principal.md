@@ -233,7 +233,9 @@
 	+ $ npm run dev
 5. Instalar Bootstrap:
     + $ npm install bootstrap
-6. Realizar commit:
+7. Instalar Font Awesome:
+    + $ npm i font-awesome
+8. Realizar commit:
     + $ git add .
     + $ git commit -m "Instalación de dependencias principales"
     + $ git push -u origin main
@@ -246,12 +248,15 @@
 
 ## Deploy del proyecto en AWS
 
+    ```php
+    ```
+
 ## Comandos Git
-+ Iniciar repositorio:
++ Crear repositorio local:
     + $ git init
-+ Agregar cambios al repositorio:
++ Agregar cambios al staging:
     + $ git add .
-+ Realizar commit:
++ Realizar confirmación de los cambios (empaquetar los cambios):
     + $ git commit -m "Antes de iniciar"
 + Crear rama principal
     + $ git branch -M main
@@ -259,9 +264,41 @@
     + $ git remote add origin https://github.com/petrix12/fid_2022.git
 + Sincronizar de Local a GitHub:
     + $ git push -u origin main
+
+
 + Sincronizar de GitHub a Local:
     + $ git pull --rebase origin
-+ mmm
 
-    ```php
-    ```
+
+
++ Configuración de email:
+    + $ git config --global user.email "bazo.pedro@gmail.com"
++ Configuración del nombre de usuario:
+    + $ git config --global user.name "Pedro Bazó"
++ Verificar los datos guardados de configuración:
+    + $ git config --global -e  (muestra el resultado en el editor de texto predeterminado)
+    + $ git config --global -l  (muestra el resultado en la misma terminal)
++ Listar la configuración inicial de Git:
+    + $ git config --list
++ Verificar modificaciones en repositorio:
+    + $ git status
++ Sacar un archivo del staging:
+    + $ git reset HEAD archivo.txt
++ Regresar todo al commit anterior (se perderán todos los cambios): 
+    + $ git checkout .
++ Ver todos los commits:
+    + $ git log
++ Volver a un commit determinado:
+    + $ git checkout 0e26441c67500daa2b3cc16a101f8994e57c6dff
++ Crear una rama:
+    + $ git branch nueva_rama
++ Ver en que rama estamos:
+    + $ git branch
++ Cambiar de rama:
+    + $ git branch otra_rama
++ Unir una rama con la principal:
+    + $ git merge rama_a_unir
++ Eliminar una rama:
+    + $ git branch -d rama_a_eliminar
++ Traer las actualizaciones desde GitHub:
+    + git pull origin main
