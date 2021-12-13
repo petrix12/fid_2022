@@ -56,16 +56,16 @@
               <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{route('home')}}">Home</a>
             </li>
             <li class="nav-item right-border">
-              <a class="nav-link {{ request()->routeIs('formation.formation_window') ? 'active' : '' }}" href="{{route('formation.formation_window')}}">Formation</a>
+              <a class="nav-link {{ request()->routeIs('formation.home') ? 'active' : '' }}" href="{{route('formation.home')}}">Formation</a>
             </li>
             <li class="nav-item right-border">
-              <a class="nav-link {{ request()->routeIs('investigation.investigation_window') ? 'active' : '' }}" href="{{route('investigation.investigation_window')}}">Investigation</a>
+              <a class="nav-link {{ request()->routeIs('investigation.home') ? 'active' : '' }}" href="{{route('investigation.home')}}">Investigation</a>
             </li>
             <li class="nav-item right-border">
-              <a class="nav-link {{ request()->routeIs('documentation.documentation_window') ? 'active' : '' }}" href="{{route('documentation.documentation_window')}}">Documentation</a>
+              <a class="nav-link {{ request()->routeIs('documentation.home') ? 'active' : '' }}" href="{{route('documentation.home')}}">Documentation</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {{ request()->routeIs('diffusion.diffusion_window') ? 'active' : '' }}" href="{{route('diffusion.diffusion_window')}}">Diffusion</a>
+              <a class="nav-link {{ request()->routeIs('diffusion.home') ? 'active' : '' }}" href="{{route('diffusion.home')}}">Diffusion</a>
             </li>
         </div>
       </div>
