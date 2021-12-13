@@ -2,6 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/investigation', function () {
+Route::get('/', function () {
     return view('investigation\investigation');
 })->name("investigation_window");

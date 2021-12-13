@@ -278,6 +278,8 @@
 + Verificar los datos guardados de configuración:
     + $ git config --global -e  (muestra el resultado en el editor de texto predeterminado)
     + $ git config --global -l  (muestra el resultado en la misma terminal)
+    + $ git config user.name    (muestra el nombre de usuario)
+    + $ git config user.email   (muestra el eamil de usuario)
 + Listar la configuración inicial de Git:
     + $ git config --list
 + Verificar modificaciones en repositorio:
@@ -288,6 +290,7 @@
     + $ git checkout .
 + Ver todos los commits:
     + $ git log
+    + $ git show
 + Volver a un commit determinado:
     + $ git checkout 0e26441c67500daa2b3cc16a101f8994e57c6dff
 + Crear una rama:

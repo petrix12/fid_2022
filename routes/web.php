@@ -24,7 +24,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 */
 
-include("formation.php");
+/* include("formation.php");
 include("diffusion.php");
 include("documentation.php");
-include("investigation.php");
+include("investigation.php"); */

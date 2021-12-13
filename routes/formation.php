@@ -2,6 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/formation', function () {
+Route::get('/', function () {
     return view('formation\\formation');
 })->name('formation_window');
