@@ -18,9 +18,9 @@
             @auth
                 <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
             @else
-                <button class="loginbtns" id="login" name="login">Login</button>
+                <button class="loginbtns" id="login" name="login">{{ trans("mainlayout.login") }}</button>
                 @if (Route::has('register'))
-                    <button class="loginbtns" id="register" name="register">Register</button>
+                    <button class="loginbtns" id="register" name="register">{{ trans("mainlayout.register") }}</button>
                 @endif
             @endauth
         </div>
@@ -53,19 +53,19 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin: auto;">
             <li class="nav-item right-border">
-              <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{route('home')}}">Home</a>
+              <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{route('home')}}">{{ trans("mainlayout.home") }}</a>
             </li>
             <li class="nav-item right-border">
-              <a class="nav-link {{ request()->routeIs('formation.home') ? 'active' : '' }}" href="{{route('formation.home')}}">Formation</a>
+              <a class="nav-link {{ request()->routeIs('formation.home') ? 'active' : '' }}" href="{{route('formation.home')}}">{{ trans("mainlayout.formation") }}</a>
             </li>
             <li class="nav-item right-border">
-              <a class="nav-link {{ request()->routeIs('investigation.home') ? 'active' : '' }}" href="{{route('investigation.home')}}">Investigation</a>
+              <a class="nav-link {{ request()->routeIs('investigation.home') ? 'active' : '' }}" href="{{route('investigation.home')}}">{{ trans("mainlayout.investigation") }}</a>
             </li>
             <li class="nav-item right-border">
-              <a class="nav-link {{ request()->routeIs('documentation.home') ? 'active' : '' }}" href="{{route('documentation.home')}}">Documentation</a>
+              <a class="nav-link {{ request()->routeIs('documentation.home') ? 'active' : '' }}" href="{{route('documentation.home')}}">{{ trans("mainlayout.documentation") }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {{ request()->routeIs('diffusion.home') ? 'active' : '' }}" href="{{route('diffusion.home')}}">Diffusion</a>
+              <a class="nav-link {{ request()->routeIs('diffusion.home') ? 'active' : '' }}" href="{{route('diffusion.home')}}">{{ trans("mainlayout.difussion") }}</a>
             </li>
         </div>
       </div>
@@ -91,12 +91,12 @@
                 </tr>
             </table>
             <p style="font-weight: bold; color: white; font-size: 1.2rem;">
-              Phone Numbers:<br>
+              @choice('mainlayout.phonenumbers', 2):<br>
               🇪🇸 (+34 911980993)<br>
               🇻🇪 (+58 2127201170)<br>
               🇨🇴 (+57 0353195843)<br>
               <br>
-              Email:<br>
+              {{ trans("mainlayout.mail") }}:<br>
               FID@sefaruniversal.com<br>
               <br>
               <span class="fa-stack fa-1x">
@@ -111,45 +111,45 @@
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="brand fab fa-facebook fa-stack-1x"></i>
               </span>
-              <a href="#" style="margin-top: 10rem; color: #CCA766 !important; text-decoration: underline;">Meet FID</a>
+              <a href="#" style="margin-top: 10rem; color: #CCA766 !important; text-decoration: underline;">{{ trans("mainlayout.meetfid") }}</a>
             </p>
           </div>
 
           <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
             <p style="font-weight: bold; color: #CCA766 !important; font-size: 1.2rem;">
-              Contact Form:
+            {{ trans("mainlayout.contactform") }}:
             </p>
               <form>
                 <p class="labelcontact">
-                  Name
+                {{ trans("mainlayout.name") }}:
                 </p>
                 <input class="inputs" type="text" name="fullname" id="fullname"/>
                 <br>
                 <p class="labelcontact">
-                  Mail
+                {{ trans("mainlayout.mail") }}:
                 </p>
                 <input class="inputs" type="mail" name="mail" id="mail"/>
                 <br>
                 <p class="labelcontact">
-                  Phone number
+                  @choice('mainlayout.phonenumbers', 1):
                 </p>
                 <input class="inputs" type="text" name="phone" id="phone"/>
                 <br>
                 <p class="labelcontact">
-                  Wich country are you contacting us?
+                {{ trans("mainlayout.contactcountry") }}:
                 </p>
                 <input class="inputs" type="text" name="country" id="country"/>
                 <br>
                 <p class="labelcontact">
-                  Subject
+                {{ trans("mainlayout.subject") }}:
                 </p>
                 <input class="inputs" type="text" name="suject" id="subject"/>
                 <p class="labelcontact">
-                  Message
+                {{ trans("mainlayout.message") }}:
                 </p>
                 <textarea class="inputs" type="text" name="message" id="message"> </textarea>
                 <br>
-                <button id="send" name="send">Submit</button>
+                <button id="send" name="send">{{ trans("mainlayout.send") }}</button>
               </form>
           </div>
 

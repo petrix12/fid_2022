@@ -1,0 +1,5 @@
+<?php
+
+return [
+    'formation' => 'Formación',
+];

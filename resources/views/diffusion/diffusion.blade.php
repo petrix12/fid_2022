@@ -13,7 +13,7 @@
                                     <i class="fas fa-circle fa-stack-2x"></i>
                                     <i class="fas fa-bullhorn fa-stack-1x fa-inverse"></i>
                                 </span>
-                                <h1 class="title_notmain">Diffusion</h1>
+                                <h1 class="title_notmain">{{ trans("difussion.difussion") }}</h1>
                             </div>
                         </td>
                     </tr>
@@ -32,7 +32,7 @@
                     <div>
                         <center>
                             <img src="/img/logos/onebranch.png" class="svgcolor"/>
-                            <h2>Diffusion</h2>
+                            <h2>{{ trans("difussion.difussion") }}</h2>
                         </center>
                     </div>
                 </div>
