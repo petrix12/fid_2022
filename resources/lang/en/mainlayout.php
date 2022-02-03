@@ -3,7 +3,7 @@
 return [
     'departments' => 'Departments',
     'formation' => 'Formation',
-    'documentation' => 'Departments',
+    'documentation' => 'Documentation',
     'investigation' => 'Investigation',
     'diffussion' => 'Diffusion',
     'home' => 'Home',

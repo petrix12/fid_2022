@@ -21,6 +21,8 @@
             </div>
         </div>
         <div class="home_container notmain" id="whitebg">
+
+
             <div id='departments_cont'>
                 <div class="leftdivide" id="dep_info_cnt">
                     
@@ -28,15 +30,42 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                 </div>
-                <div class="rightdivide" id="btns_cnt_dept">
-                    <div>
+                <div class="rightdivide" id="logo_subpage">
+                    <div style="width: 100%; padding: 20px;">
                         <center>
-                            <img src="/img/logos/onebranch.png" class="svgcolor" style="transform: rotate(270deg);" />
+                            <img class="imglogo_subpage" src="/img/logos/onebranch.png" class="svgcolor" style="transform: rotate(270deg);" />
                             <h2>{{ trans("investigation.investigation") }}</h2>
                         </center>
                     </div>
                 </div>
             </div>
+            <div style="margin:auto; width:100%;">
+                <div id="sub_elementscont">
+                    <div class="cont_redirects">
+                        <span class="padicons members_index_icons fa-stack fa-2x">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-book fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h3 class="bold">{{ trans("investigation.hist_unit") }}</h3>
+                    </div>
+                    <div class="cont_redirects">
+                        <span class="padicons members_index_icons fa-stack fa-2x">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-gavel fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h3 class="bold">{{ trans("investigation.jurid_unit") }}</h3>
+                    </div>
+                    <div class="cont_redirects">
+                        <span class="padicons members_index_icons fa-stack fa-2x">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-pagelines fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h3 class="bold">{{ trans("investigation.gen_unit") }}</h3>
+                    </div>
+                </div>
+            </div>
+            
+
         </div>
     </div>
 
