@@ -1,0 +1,17 @@
+S. No.Nombre de dominioDirección IP
+1fid-2022-ibjzu.ondigitalocean.appid-2022-ibjzu.ondigitalocean.app./104.16.244.78
+2fid-2022-ibjzu.ondigitalocean.appid-2022-ibjzu.ondigitalocean.app./104.16.243.78
+
+
+ip addr
+hostname -I
+
+
+APP_URL=http://fit_2022.test
+
+
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=fit_2022
+DB_USERNAME=root
+DB_PASSWORD=

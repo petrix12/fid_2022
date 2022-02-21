@@ -17,16 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/dashboard';
-
-    /**
-     * The controller namespace for the application.
-     *
-     * When present, controller route declarations will automatically be prefixed with this namespace.
-     *
-     * @var string|null
-     */
-    // protected $namespace = 'App\\Http\\Controllers';
+    public const HOME = '/home';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -46,36 +37,6 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
-
-            Route::middleware('web', 'auth')
-                ->name('admin.')
-                ->prefix('admin')
-                ->namespace($this->namespace)
-                ->group(base_path('routes/admin.php'));
-                
-            Route::middleware('web')
-                ->name('formation.')
-                ->prefix('formation')
-                ->namespace($this->namespace)
-                ->group(base_path('routes/formation.php'));
-                
-            Route::middleware('web')
-                ->name('investigation.')
-                ->prefix('investigation')
-                ->namespace($this->namespace)
-                ->group(base_path('routes/investigation.php'));
-                
-            Route::middleware('web')
-                ->name('documentation.')
-                ->prefix('documentation')
-                ->namespace($this->namespace)
-                ->group(base_path('routes/documentation.php'));
-                
-            Route::middleware('web')
-                ->name('diffusion.')
-                ->prefix('diffusion')
-                ->namespace($this->namespace)
-                ->group(base_path('routes/diffusion.php'));
         });
     }
 
@@ -87,7 +48,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function configureRateLimiting()
     {
         RateLimiter::for('api', function (Request $request) {
-            return Limit::perMinute(60)->by(optional($request->user())->id ?: $request->ip());
+            return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
         });
     }
 }
